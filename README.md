@@ -20,3 +20,13 @@ photo shows the common cathode. I connected this to 0v via a 100R resistor and
 drove the segments directly from the fpga.
 
 [icestick pinout](http://www.pighixxx.net/portfolio-items/icestick/)
+
+# yosys show
+
+* [top](top.png)
+* [seg10](seg10.png)
+
+# gtkwave
+
+* [seg10](gtkwave.png)
+
