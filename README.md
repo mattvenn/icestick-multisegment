@@ -4,7 +4,7 @@ uses 10 segments of a multi segment display to count 0->9
 
 ![seg_wiring](seg_wiring.jpg)
 
-![multi_seg](multi_seg.jpg)
+![multi_seg](multiseg.jpg)
 
 # wiring
 
