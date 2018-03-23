@@ -1,6 +1,6 @@
 # 10 segment demo
 
-uses 10 segments of a multi segment display to count 0->9
+uses 10 segments of a LiteOn LTP537P multi segment display to count 0->9
 
 ![seg_wiring](seg_wiring.jpg)
 
@@ -19,7 +19,10 @@ segments are wired to each pin of the icestick as shown
 photo shows the common cathode. I connected this to 0v via a 100R resistor and
 drove the segments directly from the fpga.
 
-[icestick pinout](http://www.pighixxx.net/portfolio-items/icestick/)
+* [LTP537P datasheet](http://datasheet.octopart.com/LTP-537P-Lite-On-datasheet-13712610.pdf)
+* [icestick pinout](http://www.pighixxx.net/portfolio-items/icestick/)
+
+
 
 # yosys show
 
