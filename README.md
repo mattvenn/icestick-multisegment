@@ -18,3 +18,5 @@ segments are wired to each pin of the icestick as shown
     
 photo shows the common cathode. I connected this to 0v via a 100R resistor and
 drove the segments directly from the fpga.
+
+[icestick pinout](http://www.pighixxx.net/portfolio-items/icestick/)
