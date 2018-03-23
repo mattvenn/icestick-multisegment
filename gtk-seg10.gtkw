@@ -1,0 +1,25 @@
+[*]
+[*] GTKWave Analyzer v3.3.66 (w)1999-2015 BSI
+[*] Fri Mar 23 14:57:47 2018
+[*]
+[dumpfile] "/home/matt/work/fpga/ice-7seg/test.vcd"
+[dumpfile_mtime] "Fri Mar 23 14:57:07 2018"
+[dumpfile_size] 643
+[savefile] "/home/matt/work/fpga/ice-7seg/gtk-seg10.gtkw"
+[timestart] 0
+[size] 2239 951
+[pos] -1 -1
+*-0.000571 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] test.
+[sst_width] 253
+[signals_width] 162
+[sst_expanded] 1
+[sst_vpaned_height] 281
+@28
+test.clk
+@22
+test.counter[3:0]
+@29
+test.seg10_inst.segs[9:0]
+[pattern_trace] 1
+[pattern_trace] 0
