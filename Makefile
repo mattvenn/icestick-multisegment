@@ -2,7 +2,7 @@ PROJ = seg
 PIN_DEF = icestick.pcf
 DEVICE = hx1k
 
-SRC = top.v seg10.v
+SRC = top.v seg10.v debounce.v encoder.v
 
 all: $(PROJ).bin
 #all: $(PROJ).rpt $(PROJ).bin
@@ -31,6 +31,11 @@ debug-debounce:
 	iverilog -o debounce debounce.v debounce_tb.v
 	vvp debounce -fst
 	gtkwave test.vcd gtk-debounce.gtkw
+
+debug-encoder:
+	iverilog -o encoder encoder.v encoder_tb.v
+	vvp encoder -fst
+	gtkwave test.vcd gtk-encoder.gtkw
 
 prog: $(PROJ).bin
 	iceprog $<

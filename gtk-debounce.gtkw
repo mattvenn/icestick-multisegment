@@ -1,0 +1,26 @@
+[*]
+[*] GTKWave Analyzer v3.3.58 (w)1999-2014 BSI
+[*] Sun Mar 25 19:05:43 2018
+[*]
+[dumpfile] "/home/mattvenn/work/fpga/icestick-multisegment/test.vcd"
+[dumpfile_mtime] "Sun Mar 25 19:05:27 2018"
+[dumpfile_size] 657
+[savefile] "/home/mattvenn/work/fpga/icestick-multisegment/gtk-debounce.gtkw"
+[timestart] 0
+[size] 1440 876
+[pos] -1 -1
+*-4.198297 54 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] test.
+[sst_width] 263
+[signals_width] 319
+[sst_expanded] 1
+[sst_vpaned_height] 252
+@28
+test.clk
+test.button
+@29
+test.debounce_inst.button_hist[7:0]
+@28
+test.debounce_inst.debounced
+[pattern_trace] 1
+[pattern_trace] 0

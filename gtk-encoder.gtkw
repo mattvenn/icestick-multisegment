@@ -1,0 +1,28 @@
+[*]
+[*] GTKWave Analyzer v3.3.58 (w)1999-2014 BSI
+[*] Sun Mar 25 20:19:23 2018
+[*]
+[dumpfile] "/home/mattvenn/work/fpga/icestick-multisegment/test.vcd"
+[dumpfile_mtime] "Sun Mar 25 20:18:58 2018"
+[dumpfile_size] 786
+[savefile] "/home/mattvenn/work/fpga/icestick-multisegment/gtk-encoder.gtkw"
+[timestart] 0
+[size] 1384 600
+[pos] -1 -1
+*-5.574860 146 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] test.
+[sst_width] 263
+[signals_width] 177
+[sst_expanded] 1
+[sst_vpaned_height] 155
+@28
+test.clk
+test.a
+test.encoder_inst.oa
+test.b
+@29
+test.encoder_inst.ob
+@22
+test.encoder_inst.value[3:0]
+[pattern_trace] 1
+[pattern_trace] 0
