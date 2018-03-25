@@ -27,6 +27,11 @@ debug-10seg:
 	vvp seg10 -fst
 	gtkwave test.vcd gtk-seg10.gtkw
 
+debug-debounce:
+	iverilog -o debounce debounce.v debounce_tb.v
+	vvp debounce -fst
+	gtkwave test.vcd gtk-debounce.gtkw
+
 prog: $(PROJ).bin
 	iceprog $<
 
