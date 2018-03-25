@@ -19,9 +19,11 @@ module top (
     if(count == 0)
         counter <= counter + 1;
 
+    /* count to 15 instead - will roll over as counter register is 4 bits wide
     // reset if over 9
     if(counter > 9)
         counter <= 0;
+    */
 
   end
 
