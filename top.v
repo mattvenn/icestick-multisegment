@@ -8,43 +8,43 @@ module top (
 	output [9:0] segs
 );
 
-  localparam count_width = 20;
+    localparam slow_clk_width = 10;
+    localparam counter_width = 5;
 
-  assign LED = count[count_width];
-  reg [count_width:0] count = 0;
-  wire [3:0] counter;
+    wire slow_clk;
+    reg [slow_clk_width-1:0] count = 0;
+    wire [counter_width-1:0] counter;
+    wire a_db, b_db;
+    wire a_pullup, b_pullup;
 
-  wire a_db, b_db;
+    assign slow_clk = count[slow_clk_width-1];
+    assign LED = slow_clk;
 
-/*
-  always @(posedge clk) begin
-    count <= count + 1;
+    always @(posedge clk) begin
+        count <= count + 1;
+    end
 
-    // slowly increment led counter
-    if(count == 0)
-        counter <= counter + 1;
-
-    // count to 15 instead - will roll over as counter register is 4 bits wide
-    // reset if over 9
-    //if(counter > 9)
-    //    counter <= 0;
-
-  end
-  */
-// pullup config from https://github.com/nesl/ice40_examples/blob/master/buttons_bounce/top.v
+    // pullup config from https://github.com/nesl/ice40_examples/blob/master/buttons_bounce/top.v
     SB_IO #(
         .PIN_TYPE(6'b0000_01),
         .PULLUP(1'b1)
-    ) a1_config (
-        .PACKAGE_PIN(keypad_c1),
-        .D_IN_0(keypad_c1_din)
+    ) a_config (
+        .PACKAGE_PIN(a),
+        .D_IN_0(a_pullup)
+    );
+    SB_IO #(
+        .PIN_TYPE(6'b0000_01),
+        .PULLUP(1'b1)
+    ) b_config (
+        .PACKAGE_PIN(b),
+        .D_IN_0(b_pullup)
     );
 
-  debounce #(.hist_len(8)) debounce_a(.clk(clk), .button(a), .debounced(a_db));
-  debounce #(.hist_len(8)) debounce_b(.clk(clk), .button(b), .debounced(b_db));
+  debounce #(.hist_len(8)) debounce_a(.clk(slow_clk), .button(a_pullup), .debounced(a_db));
+  debounce #(.hist_len(8)) debounce_b(.clk(slow_clk), .button(b_pullup), .debounced(b_db));
 
-  encoder encoder_inst(.clk(clk), .a(a_db), .b(b_db), .value(counter));
+  encoder #(.width(counter_width)) encoder_inst(.clk(clk), .a(a_db), .b(b_db), .value(counter));
 
-  seg10 seg10_inst(.count(counter), .segs(segs));
+  seg10 seg10_inst(.count(counter/2), .segs(segs));
 
 endmodule

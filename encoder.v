@@ -2,8 +2,10 @@ module encoder (
     input a,
     input b,
     input clk,
-    output reg [3:0] value
+    output reg [width-1:0] value
 );
+    parameter width = 4;
+
     initial begin
         value <= 0;
     end
@@ -12,13 +14,14 @@ module encoder (
     reg ob = 0;
 
 
-    always@(a,b) begin
-        case ({a,oa,b,ob})
-            4'b1000: value <= value + 1;
-            4'b0111: value <= value + 1;
-            4'b0010: value <= value - 1;
-            4'b1101: value <= value - 1;
-        endcase 
+    always@(posedge clk) begin
+        if(a != oa || b != ob )
+            case ({a,oa,b,ob})
+                4'b1000: value <= value + 1;
+                4'b0111: value <= value + 1;
+                4'b0010: value <= value - 1;
+                4'b1101: value <= value - 1;
+            endcase 
     end
 
     always@(posedge clk) begin
