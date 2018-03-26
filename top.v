@@ -8,7 +8,7 @@ module top (
 	output [9:0] segs
 );
 
-    localparam slow_clk_width = 10;
+    localparam slow_clk_width = 8;
     localparam counter_width = 5;
 
     wire slow_clk;
@@ -40,8 +40,8 @@ module top (
         .D_IN_0(b_pullup)
     );
 
-  debounce #(.hist_len(8)) debounce_a(.clk(slow_clk), .button(a_pullup), .debounced(a_db));
-  debounce #(.hist_len(8)) debounce_b(.clk(slow_clk), .button(b_pullup), .debounced(b_db));
+  debounce #(.hist_len(4)) debounce_a(.clk(slow_clk), .button(a_pullup), .debounced(a_db));
+  debounce #(.hist_len(4)) debounce_b(.clk(slow_clk), .button(b_pullup), .debounced(b_db));
 
   encoder #(.width(counter_width)) encoder_inst(.clk(clk), .a(a_db), .b(b_db), .value(counter));
 
