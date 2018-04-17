@@ -3,12 +3,15 @@
 module top (
 	input  clk,
     output LED,
+    output sync,
 	output [9:0] segs
 );
 
-  localparam count_width = 20;
+  localparam count_width = 10;
 
   assign LED = count[count_width];
+  assign sync = counter == 0;
+
   reg [count_width:0] count = 0;
   reg [3:0] counter = 0;
 

@@ -39,6 +39,10 @@ sudo-prog: $(PROJ).bin
 	@echo 'Executing prog as root!!!'
 	sudo iceprog $<
 
+capture:
+	sigrok-cli --driver=fx2lafw -c "samplerate=1M" --samples 1M -O vcd > /tmp/out.vcd
+	gtkwave /tmp/out.vcd gtk-saleae.gtkw 
+
 clean:
 	rm -f $(PROJ).blif $(PROJ).asc $(PROJ).rpt $(PROJ).bin
 

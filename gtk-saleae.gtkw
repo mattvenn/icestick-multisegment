@@ -1,0 +1,28 @@
+[*]
+[*] GTKWave Analyzer v3.3.66 (w)1999-2015 BSI
+[*] Tue Apr 17 17:51:09 2018
+[*]
+[dumpfile] "/tmp/out.vcd"
+[dumpfile_mtime] "Tue Apr 17 17:50:11 2018"
+[dumpfile_size] 110326
+[savefile] "/home/matt/work/fpga/icestick-multisegment/gtk-saleae.gtkw"
+[timestart] 3251
+[size] 1635 826
+[pos] -319 -522
+*-10.000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 253
+[signals_width] 78
+[sst_expanded] 1
+[sst_vpaned_height] 238
+@28
+libsigrok.D0
+libsigrok.D1
+libsigrok.D2
+libsigrok.D3
+libsigrok.D4
+libsigrok.D5
+libsigrok.D6
+@29
+libsigrok.D7
+[pattern_trace] 1
+[pattern_trace] 0

@@ -1,15 +1,15 @@
 [*]
 [*] GTKWave Analyzer v3.3.66 (w)1999-2015 BSI
-[*] Fri Mar 23 14:57:47 2018
+[*] Tue Apr 17 17:53:16 2018
 [*]
-[dumpfile] "/home/matt/work/fpga/ice-7seg/test.vcd"
-[dumpfile_mtime] "Fri Mar 23 14:57:07 2018"
-[dumpfile_size] 643
-[savefile] "/home/matt/work/fpga/ice-7seg/gtk-seg10.gtkw"
+[dumpfile] "/home/matt/work/fpga/icestick-multisegment/test.vcd"
+[dumpfile_mtime] "Tue Apr 17 17:52:23 2018"
+[dumpfile_size] 701
+[savefile] "/home/matt/work/fpga/icestick-multisegment/gtk-seg10.gtkw"
 [timestart] 0
 [size] 2239 951
 [pos] -1 -1
-*-0.000571 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-3.000571 31 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] test.
 [sst_width] 253
 [signals_width] 162
@@ -19,7 +19,22 @@
 test.clk
 @22
 test.counter[3:0]
-@29
+@28
+test.sync
+@800029
 test.seg10_inst.segs[9:0]
+@29
+(0)test.seg10_inst.segs[9:0]
+(1)test.seg10_inst.segs[9:0]
+(2)test.seg10_inst.segs[9:0]
+(3)test.seg10_inst.segs[9:0]
+(4)test.seg10_inst.segs[9:0]
+(5)test.seg10_inst.segs[9:0]
+(6)test.seg10_inst.segs[9:0]
+(7)test.seg10_inst.segs[9:0]
+(8)test.seg10_inst.segs[9:0]
+(9)test.seg10_inst.segs[9:0]
+@1001201
+-group_end
 [pattern_trace] 1
 [pattern_trace] 0

@@ -2,6 +2,7 @@ module test;
 
   reg clk = 0;
   reg [3:0] counter = 0;
+  wire sync = counter == 0;
 
   initial begin
      $dumpfile("test.vcd");
