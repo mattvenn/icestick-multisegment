@@ -1,0 +1,13 @@
+[options]
+mode prove
+depth 100
+
+[engines]
+smtbmc
+
+[script]
+read -formal debounce.v
+prep -top debounce
+
+[files]
+../debounce.v

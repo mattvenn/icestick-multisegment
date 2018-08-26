@@ -3,6 +3,7 @@ module debounce (
     input button,
     output reg debounced
 );
+    initial debounced = 0;
     parameter hist_len = 8;
     localparam on_value = 2 ** hist_len - 1;
     reg [hist_len-1:0] button_hist = 0;
@@ -14,5 +15,12 @@ module debounce (
         else if(button_hist == 0)
            debounced <= 0;
     end
+
+    `ifdef FORMAL
+        always @(*)
+            assert(debounced == 0);
+        always @(posedge clk)
+            assume($past(button == 0,hist_len));
+    `endif
 
 endmodule
