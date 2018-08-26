@@ -17,10 +17,14 @@ module debounce (
     end
 
     `ifdef FORMAL
+        // assert debounce goes high when button_hist is full
         always @(*)
-            assert(debounced == 0);
-        always @(posedge clk)
-            assume($past(button == 0,hist_len));
+            if(button_hist == on_value)
+                assert property(debounced == 1);
+        // assert debounce is low when button_hist empty
+        always @(*)
+            if(button_hist == 0)
+                assert property(debounced == 0);
     `endif
 
 endmodule

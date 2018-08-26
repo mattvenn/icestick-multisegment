@@ -1,25 +1,36 @@
 [*]
 [*] GTKWave Analyzer v3.3.58 (w)1999-2014 BSI
-[*] Sun Aug 26 14:39:14 2018
+[*] Sun Aug 26 15:00:20 2018
 [*]
-[dumpfile] "/home/mattvenn/work/fpga/icestick-multisegment/debounce/engine_0/trace.vcd"
-[dumpfile_mtime] "Sun Aug 26 14:39:00 2018"
-[dumpfile_size] 1041
-[savefile] "/home/mattvenn/work/fpga/icestick-multisegment/debounce.gtkw"
+[dumpfile] "/home/mattvenn/work/fpga/icestick-multisegment/formal/debounce/engine_0/trace.vcd"
+[dumpfile_mtime] "Sun Aug 26 14:58:37 2018"
+[dumpfile_size] 1212
+[savefile] "/home/mattvenn/work/fpga/icestick-multisegment/formal/debounce.gtkw"
 [timestart] 0
 [size] 1000 600
 [pos] -1 -1
-*-5.824838 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-5.824838 93 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [sst_width] 263
-[signals_width] 190
+[signals_width] 263
 [sst_expanded] 1
 [sst_vpaned_height] 155
 @28
 debounce.clk
 debounce.button
-@22
+@800023
 debounce.button_hist[7:0]
 @29
+(0)debounce.button_hist[7:0]
+(1)debounce.button_hist[7:0]
+(2)debounce.button_hist[7:0]
+(3)debounce.button_hist[7:0]
+(4)debounce.button_hist[7:0]
+(5)debounce.button_hist[7:0]
+(6)debounce.button_hist[7:0]
+(7)debounce.button_hist[7:0]
+@1001201
+-group_end
+@28
 debounce.debounced
 [pattern_trace] 1
 [pattern_trace] 0
